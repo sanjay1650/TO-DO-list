@@ -1,0 +1,28 @@
+:root{
+--bg:#0f172a;
+--card:#0b1220;
+--accent:#7c3aed;
+--muted:#94a3b8;
+--surface:#0b1220;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,var(--bg),#020617);color:#e6eef8;padding:24px}
+.app{width:100%;max-width:560px;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.6)}
+h1{text-align:center;margin-bottom:18px;font-size:24px}
+.task-form{display:flex;gap:10px}
+#task-input{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:transparent;color:inherit;font-size:16px}
+#add-btn{padding:10px 14px;border-radius:8px;border:none;background:var(--accent);color:white;font-weight:600;cursor:pointer}
+.controls{display:flex;align-items:center;justify-content:space-between;margin-top:12px;margin-bottom:12px;gap:8px}
+.controls button{background:transparent;border:1px solid rgba(255,255,255,.06);color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
+.stats{color:var(--muted);font-size:14px}
+.task-list{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:8px}
+.task-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);border:1px solid rgba(255,255,255,.03)}
+.task-left{display:flex;align-items:center;gap:12px}
+.checkbox{width:18px;height:18px;display:inline-grid;place-items:center;border-radius:4px;border:1px solid rgba(255,255,255,.06);cursor:pointer}
+.checkbox.checked{background:var(--accent);border:none}
+.task-text{font-size:16px;color:inherit}
+.task-text.completed{text-decoration:line-through;opacity:.6}
+.task-actions{display:flex;gap:8px;align-items:center}
+.remove-btn{background:transparent;border:none;color:#ffb4b4;cursor:pointer;font-weight:700}
+@media (max-width:420px){.app{padding:18px}#add-btn{padding:10px}}
